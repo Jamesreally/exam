@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Loginpage from "./pages/SignUp";
+import Home from "./pages/Home";
+import UserDashboard from "./pages/UserDashboard";
+import UpdateInfo from "./pages/UpdateInfo";
+import UserAbout from "./pages/UserAbout";
+import LoginFile from "./pages/Login";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import AuthContext from "./components/AuthContext";
+import Error from "./components/Error404";
+import { ErrorBoundary } from "react-error-boundary";
 
-function App() {
+export default function Appcontainer() {
+  const [User, setUser] = useState({
+    FirstName: "",
+    LastName: "",
+    email: "",
+    password: "",
+    PhoneNo: "",
+  });
+  const [isloggedIn, setIsloggedIn] = useState(false);
+  const Authvalue = { User, setUser, isloggedIn, setIsloggedIn };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={Authvalue}>
+      <App />
+    </AuthContext.Provider>
   );
 }
-
-export default App;
+function App() {
+  return (
+    <Router>
+      <ErrorBoundary FallbackComponent={Fallback}>
+        <Routes>
+          <Route path="/" element={<Loginpage />} />
+          <Route path="/Login" element={<LoginFile />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/User" element={<UserDashboard />}>
+            <Route path="UserAbout" element={<UserAbout />} />
+            <Route path="UpdateInfo" element={<UpdateInfo />} />
+          </Route>
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </ErrorBoundary>
+    </Router>
+  );
+}

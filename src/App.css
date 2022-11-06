@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: aliceblue;
 }
 
 .App-logo {
@@ -11,6 +12,135 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  header {
+    background-color: #0b2761fd;
+    padding-bottom: 2%;
+    margin-bottom: 10%;
+  }
+  nav {
+    justify-content: center;
+    text-align: left;
+    padding-top: 2.5%;
+  }
+  .NavLink {
+    padding-left: 1%;
+    text-decoration: solid;
+    font-size: 18px;
+    font-weight: 700;
+    color: aliceblue;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .NavvLink {
+    padding-left: 1%;
+    text-decoration: solid;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(13, 23, 83, 0.87);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;}
+      .NavLink:hover{
+        color: gray;
+      }
+      .NavvLink:hover{
+        color: #5b657a;
+      }
+      .buttons:hover{
+        background-color: #8c96a8;
+      }
+      .list{
+        padding-top: 1%;
+        padding-bottom: 25%;
+      }
+      .Lii{padding-top: 2.5%;
+
+      }
+
+}
+.content{
+  text-align: center;
+
+}
+
+.formContainer {
+  background-color: #192a72;
+  text-align: center;
+  justify-content: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 13%;
+  margin-bottom: 20%;
+  padding-bottom: 5%;
+  padding-top: 1.5%;
+}
+.signuptext {
+  margin-bottom: 20%;
+  text-align: center;
+  justify-content: space-between;
+  color: aliceblue;
+}
+label {
+  font-style: normal;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: aliceblue;
+}
+form {
+  margin-bottom: 10%;
+  text-align: center;
+  justify-content: space-between;
+  color: aliceblue;
+}
+Input {
+  background-color: #bbbec5;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  color: rgb(32, 34, 36);
+  justify-self: right;
+  text-align: justify;
+  margin: 1.2%;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+footer{
+  background-color: #102658;
+  padding-top: 15%;
+  padding-top: 3%;
+margin-top: 0%;}
+.Ins {
+  justify-self: right;
+  align-self: stretch;
+  align-content: stretch;
+  justify-content: right;
+}
+.omale{
+  margin-bottom: 0%;
+  padding-top: 3%;
+}
+.buttons {
+  background-color: #102658;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  color: aliceblue;
+  justify-self: center;
+  text-align: center;
+  padding-top: 2%;
+  margin-top: 8%;
+}
+.buttonss{
+  background-color: #102658;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  color: aliceblue;
+  justify-self: center;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 0%;
+  margin-bottom: 10%;
+}
+.buttonss:hover{
+
+  background-color: #8c96a8;
 }
 
 .App-header {
