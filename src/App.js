@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AuthContext from "./components/AuthContext";
 import Error from "./components/Error404";
 import { ErrorBoundary } from "react-error-boundary";
+import Fallback from "./components/Fallback";
 
 export default function Appcontainer() {
   const [User, setUser] = useState({
